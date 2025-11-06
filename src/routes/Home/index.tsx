@@ -4,13 +4,21 @@
 
   export default function Home() {
     const navigate = useNavigate();
-
-    const handleAgendarClick = () => {
+  const handleAgendarClick = () => {
+    const usuario = sessionStorage.getItem('usuario');
+    if (!usuario) {
+      alert('Você precisa estar logado para agendar uma consulta.');
+      navigate('/login');
+    } else {
       navigate('/agendamento');
-    };
+    }
+  };
 
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
     return (
-      <main className="bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen px-6 py-12 text-blue-900">
+      <main className="bg-linear-to-b from-blue-50 via-white to-blue-100 min-h-screen px-6 py-12 text-blue-900">
         <section className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold mb-4 text-blue-800">Portal do Paciente</h1>
           <h2 className="text-xl font-semibold mb-6 text-blue-700">Bem-vindo ao Portal de Agendamento de Consultas</h2>
@@ -24,8 +32,16 @@
             className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-blue-700 transition duration-300 shadow-md hover:shadow-lg"
           >
             Agendar Consulta
-          </button>
-        </section>
+          </button><br/>
+           <button
+          onClick={handleLoginClick}
+          className="mt-4 bg-green-600 text-white px-6 py-3 rounded-full text-lg font-medium hover:bg-green-700 transition duration-300 shadow-md hover:shadow-lg"
+        >
+          Fazer Login
+        </button>
+      </section>
+     
+        
 
         
         <section className="max-w-4xl mx-auto mt-16 text-center">

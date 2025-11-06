@@ -1,4 +1,18 @@
+import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 export default function Consultas() {
+  const navigate = useNavigate();
+
+  // ✅ Verifica login ao carregar a página
+  useEffect(() => {
+    const usuario = sessionStorage.getItem('usuario');
+    if (!usuario) {
+      alert('Você precisa estar logado para visualizar suas consultas.');
+      navigate('/login');
+    }
+  }, [navigate]);
+
   const consultas = [
     { id: 101, dataHora: '2025-05-25 10:00', medico: 'Dr. João', status: 'Confirmada' },
     { id: 102, dataHora: '2025-05-30 14:00', medico: 'Dra. Maria', status: 'Pendente' },
@@ -9,15 +23,14 @@ export default function Consultas() {
     { id: 107, dataHora: '2025-11-01 08:30', medico: 'Dra. Luiza', status: 'Cancelada' },
   ];
 
-const statusColor: { [key: string]: string } = {
-  Confirmada: 'text-green-600 font-semibold',
-  Pendente: 'text-yellow-600 font-semibold',
-  Cancelada: 'text-red-600 font-semibold',
-};
-
+  const statusColor: { [key: string]: string } = {
+    Confirmada: 'text-green-600 font-semibold',
+    Pendente: 'text-yellow-600 font-semibold',
+    Cancelada: 'text-red-600 font-semibold',
+  };
 
   return (
-    <main className="bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen p-6 text-blue-900">
+    <main className="bg-linear-to-b from-blue-50 via-white to-blue-100 min-h-screen p-6 text-blue-900">
       <section id="consultas" className="max-w-6xl mx-auto bg-white p-8 rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold mb-6 text-center text-blue-800">Histórico de Consultas</h2>
         <div className="overflow-x-auto">
