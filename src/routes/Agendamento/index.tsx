@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Agendamento() {
   const [nome, setNome] = useState('');
@@ -8,9 +8,24 @@ export default function Agendamento() {
   const [data, setData] = useState('');
   const [hora, setHora] = useState('');
   const [medico, setMedico] = useState('');
+  const [usuarioLogado, setUsuarioLogado] = useState(false);
+
+  // ✅ Verifica login ao carregar a página
+  useEffect(() => {
+    const usuario = sessionStorage.getItem('usuario');
+    if (usuario) {
+      setUsuarioLogado(true);
+    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (!usuarioLogado) {
+      alert('Você precisa estar logado para agendar uma consulta.');
+      return;
+    }
+
     console.log('Agendamento:', { nome, cpf, telefone, email, data, hora, medico });
     alert('Consulta agendada com sucesso!');
     setNome('');
@@ -26,8 +41,12 @@ export default function Agendamento() {
     <main className="bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen px-6 py-12 text-blue-900">
       <section className="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg">
         <h2 className="text-3xl font-bold mb-6 text-center text-blue-800">Agende sua Consulta</h2>
+        {!usuarioLogado && (
+          <p className="text-red-600 text-center mb-4 font-medium">
+            ⚠️ Você precisa estar logado para agendar uma consulta.
+          </p>
+        )}
         <form onSubmit={handleSubmit} className="space-y-6">
-          {/* Campos do paciente */}
           <div>
             <label htmlFor="nome" className="block text-sm font-medium text-blue-800 mb-1">Nome completo:</label>
             <input
@@ -72,8 +91,6 @@ export default function Agendamento() {
               className="w-full px-4 py-2 border border-blue-300 rounded-md text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm"
             />
           </div>
-
-          {/* Dados da consulta */}
           <div>
             <label htmlFor="data" className="block text-sm font-medium text-blue-800 mb-1">Data:</label>
             <input

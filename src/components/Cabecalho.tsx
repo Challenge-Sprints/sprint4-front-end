@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function Cabecalho() {
   return (
-    <header className="bg-gradient-to-b from-blue-50 via-white to-blue-100 shadow-md">
+    <header className="bg-linear-to-b from-blue-50 via-white to-blue-100 shadow-md">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-6">
         <h1 className="text-3xl font-bold text-blue-900 mb-4 md:mb-0">Hospital das Clínicas</h1>
         <nav>

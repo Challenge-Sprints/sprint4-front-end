@@ -37,7 +37,7 @@ export default function Login() {
   };
 
   return (
-    <main className="bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen flex items-center justify-center px-6 py-12">
+    <main className="bg-linear-to-b from-blue-50 via-white to-blue-100 min-h-screen flex items-center justify-center px-6 py-12">
       <div className="max-w-5xl w-full bg-white rounded-xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
         {/* Imagem lateral */}
         <div className="hidden md:block">
