@@ -1,4 +1,5 @@
 import { StrictMode } from 'react'
+import FaqDetalhe from './routes/FaqDetalhe/index.tsx';
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
@@ -40,7 +41,13 @@ const router = createBrowserRouter([
       {
         path: '/quemsomos',
         element: <QuemSomos/>,
+
+      },
+      {
+        path:'/faq/:id',
+        element:<FaqDetalhe />,
       }
+
     ]
   }
 ])

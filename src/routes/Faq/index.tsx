@@ -1,6 +1,6 @@
 export default function Faq() {
   return (
-    <main className="bg-gradient-to-b from-blue-50 via-white to-blue-100 min-h-screen px-6 py-12 text-blue-900">
+    <main className="bg-linear-to-b from-blue-50 via-white to-blue-100 min-h-screen px-6 py-12 text-blue-900">
       <section id="faq" className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8 text-blue-800">FAQ - Perguntas Frequentes</h1>
         <h2 className="text-2xl font-semibold mb-6 text-blue-700 text-center">Dúvidas Comuns</h2>
