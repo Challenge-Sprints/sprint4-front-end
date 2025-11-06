@@ -1,4 +1,12 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function Faq() {
+  const navigate = useNavigate();
+
+  const verPergunta = (id: number) => {
+    navigate(`/faq/${id}`);
+  };
+
   return (
     <main className="bg-linear-to-b from-blue-50 via-white to-blue-100 min-h-screen px-6 py-12 text-blue-900">
       <section id="faq" className="max-w-4xl mx-auto">
@@ -7,15 +15,15 @@ export default function Faq() {
 
         <div className="space-y-4">
           {faqItems.map((item, index) => (
-            <details
+            <button
               key={index}
-              className="bg-white border border-blue-200 rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow duration-300"
+              onClick={() => verPergunta(index)}
+              className="block w-full text-left bg-white border border-blue-200 rounded-lg shadow-sm p-4 hover:shadow-md transition-shadow duration-300 hover:bg-blue-50"
             >
-              <summary className="cursor-pointer text-blue-800 font-medium text-lg hover:text-blue-600 transition-colors duration-200">
+              <span className="text-blue-800 font-medium text-lg hover:text-blue-600 transition-colors duration-200">
                 {item.pergunta}
-              </summary>
-              <p className="mt-2 text-blue-700">{item.resposta}</p>
-            </details>
+              </span>
+            </button>
           ))}
         </div>
       </section>
