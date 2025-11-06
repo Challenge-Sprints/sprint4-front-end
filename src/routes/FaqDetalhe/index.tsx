@@ -69,7 +69,7 @@ export default function FaqDetalhe() {
   }
 
   return (
-    <main className="bg-gradient-to-b from-white via-blue-50 to-blue-100 min-h-screen px-6 py-12 text-blue-900">
+    <main className="bg-linear-to-b from-white via-blue-50 to-blue-100 min-h-screen px-6 py-12 text-blue-900">
       <section className="max-w-3xl mx-auto text-center">
         <h1 className="text-4xl font-bold text-blue-800 mb-6">Pergunta Selecionada</h1>
         <h2 className="text-2xl font-semibold text-blue-700 mb-4">{item.pergunta}</h2>
