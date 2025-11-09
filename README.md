@@ -61,7 +61,7 @@ O portal oferece funcionalidades como:
 ## 🔗 Links Importantes
 - **Deploy no Vercel:** [Portal do Paciente Online](https://sprint4-front-end-eight.vercel.app/)  
 - **Repositório GitHub:** [Clique aqui](https://github.com/seu-repositorio)  
-- **Vídeo no YouTube:** [Clique aqui](https://youtube.com/seu-video)  
+- **Vídeo no YouTube:** [Clique aqui]([https://youtube.com/seu-video](https://youtu.be/Od7CeVIBObU))  
 
 ---
 
