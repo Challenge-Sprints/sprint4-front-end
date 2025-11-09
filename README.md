@@ -25,20 +25,6 @@ O portal oferece funcionalidades como:
 - **José Ricardo Pereira Iannuzzi** — RM: 564112 — [GitHub](https://github.com/jr-iannuzzi)  
 - **Eduardo Augusto de Oliveira Souza** — RM: 565269 — [GitHub](https://github.com/Edu-Ardo18)  
 
----
-
-## 🖼️ Imagens do Projeto
-### Tela Inicial
-![Home](./src/images/home.png)
-
-### Tela de Login
-![Login](./src/images/login.png)
-
-### Tela de Agendamento
-![Agendamento](./src/images/agendamento.png)
-
----
-
 ## 🎨 Ícones Utilizados
 - Ícones do **Heroicons** (Tailwind)  
 - Ícones de status de consultas:  
