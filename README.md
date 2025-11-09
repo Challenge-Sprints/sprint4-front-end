@@ -1,69 +1,72 @@
-# React + TypeScript + Vite
+# 🏥 Portal do Paciente — Sistema de Agendamento de Consultas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Sobre o Projeto
+Este sistema foi desenvolvido para facilitar o **agendamento de consultas médicas** no Hospital das Clínicas e no IMREA.  
+O portal oferece funcionalidades como:
+- Login de usuários
+- Agendamento de consultas
+- Histórico de consultas
+- Integração com backend Java
+- Interface moderna e responsiva com **React + TailwindCSS**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
+- **Frontend:** React, TypeScript, TailwindCSS  
+- **Backend:** Java (Spring Boot)  
+- **Armazenamento:** LocalStorage / SessionStorage  
+- **Controle de versão:** Git + GitHub  
+- **Ferramentas de apoio:** Node.js, Vite  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 👨‍💻 Integrantes do Grupo
+- **Gabriel Henrique Souza Gonçalves** — RM: 563732 — [GitHub](https://github.com/gabrielhensg)  
+- **José Ricardo Pereira Iannuzzi** — RM: 564112 — [GitHub](https://github.com/jr-iannuzzi)  
+- **Eduardo Augusto de Oliveira Souza** — RM: 565269 — [GitHub](https://github.com/Edu-Ardo18)  
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🖼️ Imagens do Projeto
+### Tela Inicial
+![Home](./src/images/home.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Tela de Login
+![Login](./src/images/login.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Tela de Agendamento
+![Agendamento](./src/images/agendamento.png)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎨 Ícones Utilizados
+- Ícones do **Heroicons** (Tailwind)  
+- Ícones de status de consultas:  
+  - ✅ Confirmada  
+  - ⚠️ Pendente  
+  - ❌ Cancelada  
+
+---
+
+## 📂 Estrutura de Pastas
+
+```plaintext
+📦 projeto-sprint4
+ ┣ 📂 src
+ ┃ ┣ 📂 pages
+ ┃ ┃ ┣ 📜 Home.tsx
+ ┃ ┃ ┣ 📜 Login.tsx
+ ┃ ┃ ┣ 📜 Consultas.tsx
+ ┃ ┃ ┣ 📜 Agendamento.tsx
+ ┃ ┃ ┗ 📜 QuemSomos.tsx
+ ┃ ┣ 📂 images
+ ┃ ┃ ┣ 📜 gabriel1.jpeg
+ ┃ ┃ ┣ 📜 jose.jpeg
+ ┃ ┃ ┣ 📜 dudu.jpg
+ ┃ ┃ ┗ 📜 login-banner.jpg
+ ┃ ┣ 📜 main.tsx
+ ┃ ┗ 📜 App.tsx
+ ┣ 📜 package.json
+ ┣ 📜 vite.config.ts
+ ┗ 📜 README.md
+
